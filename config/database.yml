@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgis
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+  host: localhost
+  port: 5432
+  username: liggar
+  password: Prayoga1!
+  database: demo_tutorial
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
